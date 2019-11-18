@@ -13,13 +13,13 @@ The process that manages the queue of aircraft satisfies the following:
     - Large aircraft of a given type have removal precedence over Small aircraft of the same type.
     - Earlier enqueued aircraft of a given type and size have precedence over later enqueued aircraft of the same type and size.
 
-##Local environment swagger API documentation links
+## Local environment swagger API documentation links
 
 The API documentation provided at:
 Open __http://localhost:8080/swagger-ui.html__ for API documentation
 http://localhost:8080/v2/api-docs
 
-##How To Run:
+## How To Run:
 
 mvn spring-boot:run
 
