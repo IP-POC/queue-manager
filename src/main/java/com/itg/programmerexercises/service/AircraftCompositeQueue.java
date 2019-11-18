@@ -20,13 +20,13 @@ public class AircraftCompositeQueue {
     protected final ConcurrentLinkedQueue<Aircraft> passengerSmall = new ConcurrentLinkedQueue<>();
     protected final ConcurrentLinkedQueue<Aircraft> cargoLarge = new ConcurrentLinkedQueue<>();
     protected final ConcurrentLinkedQueue<Aircraft> cargoSmall = new ConcurrentLinkedQueue<>();
-    private final Queue[] queueArray;
+    private final Queue<Aircraft>[] queueArray;
 
     public AircraftCompositeQueue() {
         this.queueArray = new ConcurrentLinkedQueue[]{passengerLarge, passengerSmall, cargoLarge, cargoSmall};
     }
 
-    protected Queue[] getQueueArray() {
+    protected Queue<Aircraft>[] getQueueArray() {
         return queueArray;
     }
 
