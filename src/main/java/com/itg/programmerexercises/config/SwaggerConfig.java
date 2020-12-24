@@ -33,7 +33,7 @@ public class SwaggerConfig {
 
     private ApiInfo createMetaData() {
         Contact contact = new Contact("Igor Pyrin", "",
-                "igor.pyrin@gmail.com");
+                "");
         return new ApiInfo(
                 "Aircraft Queue Manager",
                 "Aircraft Queue Manager",

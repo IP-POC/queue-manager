@@ -40,7 +40,7 @@ public class AircraftQueueManagerImpl implements AircraftQueueManager {
 
     @Override
     public Aircraft dequeueAircraft() {
-        Aircraft aircraft = null;
+        Aircraft aircraft;
         if (getQueueSize() == 0) {
             throw new AircraftNotFoundException("The aircraft queue is empty!");
         }
