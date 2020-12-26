@@ -1,16 +1,16 @@
 package com.itg.programmerexercises.api.v1.model;
 
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 import javax.validation.constraints.NotBlank;
 
 public class AircraftDTO {
-    @ApiModelProperty(value = "Type of the aircraft", required = true)
+    @Schema(description = "Type of the aircraft", required = true)
     @NotBlank
     private String aircraftType;
-    @ApiModelProperty(value = "Size of the aircraft", required = true)
+    @Schema(description = "Size of the aircraft", required = true)
     @NotBlank
     private String aircraftSize;
 
