@@ -27,7 +27,7 @@ System Implementation:
 
 The API documentation provided at:
 Open __http://localhost:8080/swagger-ui.html__ for API documentation
-http://localhost:8080/v2/api-docs
+http://localhost:8080/v3/api-docs
 
 ## How To Run:
 
