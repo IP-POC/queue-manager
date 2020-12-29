@@ -23,10 +23,11 @@ System Implementation:
 - The code has REST endpoints that implement the three defined requests and follows the above guidelines to implement an aircraft queue manager.
 
 
-## Local environment swagger API documentation links
+## Local environment OpenAPI (swagger) API documentation links
 
 The API documentation provided at:
-Open __http://localhost:8080/swagger-ui.html__ for API documentation
+__http://localhost:8080/swagger-ui.html__ 
+and for API documentation 
 http://localhost:8080/v3/api-docs
 
 ## How To Run:
