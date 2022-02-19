@@ -31,7 +31,7 @@ public class AircraftApiController {
     @Operation(summary = "Initiate system boot")
     @PostMapping(value = "/systemboot")
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity systemBoot() {
+    public ResponseEntity<String> systemBoot() {
         this.aircraftQueueManager.systemBoot();
         return ResponseEntity.ok("System rebooted");
     }
@@ -40,7 +40,7 @@ public class AircraftApiController {
     @PostMapping(value = "/enqueue")
     @ResponseStatus(HttpStatus.CREATED)
     //TODO: check why body params doesn't show up in swagger ui
-    public ResponseEntity enqueueAircraft(@RequestBody AircraftDTO aircraftDto) {
+    public ResponseEntity<Aircraft> enqueueAircraft(@RequestBody AircraftDTO aircraftDto) {
         Aircraft aircraft = aircraftMapper.aircraftDtoToAircraft(aircraftDto);
         this.aircraftQueueManager.enqueueAircraft(aircraft);
         return new ResponseEntity<>(aircraft, HttpStatus.CREATED);
@@ -49,7 +49,7 @@ public class AircraftApiController {
     @Operation(summary = "Dequeue an Aircraft from the system")
     @PostMapping(value = "/dequeue")
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public ResponseEntity dequeueAircraft() {
+    public ResponseEntity<Aircraft> dequeueAircraft() {
         Aircraft aircraft = this.aircraftQueueManager.dequeueAircraft();
         return new ResponseEntity<>(aircraft, HttpStatus.ACCEPTED);
     }
