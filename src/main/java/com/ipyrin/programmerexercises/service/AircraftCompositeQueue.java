@@ -31,7 +31,7 @@ public class AircraftCompositeQueue {
     }
 
     /**
-     * Removes all of the elements from this queue.
+     * Removes all the elements from this queue.
      */
     public void clear() {
         passengerLarge.clear();

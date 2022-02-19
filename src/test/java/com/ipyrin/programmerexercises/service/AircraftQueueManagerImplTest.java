@@ -31,14 +31,14 @@ public class AircraftQueueManagerImplTest {
 
     @Test
     public void systemBootOne() {
-        buildAndEnqueAircraftToQueue(AircraftType.PASSENGER, AircraftSize.LARGE);
+        buildAndEnqueueAircraftToQueue(AircraftType.PASSENGER, AircraftSize.LARGE);
         subject.systemBoot();
         assertEquals(0, subject.getQueueSize());
     }
 
     @Test
     public void enqueueAircraftPassengerLarge() {
-        buildAndEnqueAircraftToQueue(AircraftType.PASSENGER, AircraftSize.LARGE);
+        buildAndEnqueueAircraftToQueue(AircraftType.PASSENGER, AircraftSize.LARGE);
         assertEquals(1, subject.getQueueSize());
     }
 
@@ -50,12 +50,12 @@ public class AircraftQueueManagerImplTest {
 
     @Test
     public void dequeueAircraft() {
-        buildAndEnqueAircraftToQueue(AircraftType.PASSENGER, AircraftSize.LARGE);
+        buildAndEnqueueAircraftToQueue(AircraftType.PASSENGER, AircraftSize.LARGE);
         Aircraft aircraft = subject.dequeueAircraft();
         assertEquals(0, subject.getQueueSize());
     }
 
-    private Aircraft buildAndEnqueAircraftToQueue(AircraftType type, AircraftSize size) {
+    private Aircraft buildAndEnqueueAircraftToQueue(AircraftType type, AircraftSize size) {
         Aircraft aircraft = Aircraft.builder()
                 .aircraftType(type)
                 .aircraftSize(size)
