@@ -20,7 +20,7 @@
         <java.version>11</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <springdoc-openapi.version>1.4.6</springdoc-openapi.version>
+        <springdoc-openapi.version>1.6.6</springdoc-openapi.version>
         <apache.commons.version>3.12.0</apache.commons.version>
         <org.mapstruct.version>1.4.2.Final</org.mapstruct.version>
     </properties>
