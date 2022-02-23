@@ -4,21 +4,22 @@ import com.ipyrin.programmerexercises.exception.AircraftNotFoundException;
 import com.ipyrin.programmerexercises.objects.aircraft.Aircraft;
 import com.ipyrin.programmerexercises.objects.aircraft.enums.AircraftSize;
 import com.ipyrin.programmerexercises.objects.aircraft.enums.AircraftType;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@RunWith(SpringRunner.class)
+@ExtendWith(SpringExtension.class)
 @SpringBootTest
 public class AircraftQueueManagerImplTest {
 
     AircraftQueueManagerImpl subject;
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         subject = new AircraftQueueManagerImpl(new AircraftCompositeQueue());
     }
@@ -42,10 +43,12 @@ public class AircraftQueueManagerImplTest {
         assertEquals(1, subject.getQueueSize());
     }
 
-    @Test(expected = AircraftNotFoundException.class)
+    @Test
     public void dequeueAircraftEmptyQueue() {
-        Aircraft aircraft = subject.dequeueAircraft();
-        assertEquals(0, subject.getQueueSize());
+        Assertions.assertThrows(AircraftNotFoundException.class, () -> {
+            Aircraft aircraft = subject.dequeueAircraft();
+            assertEquals(0, subject.getQueueSize());
+        });
     }
 
     @Test

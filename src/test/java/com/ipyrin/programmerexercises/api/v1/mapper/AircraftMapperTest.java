@@ -4,9 +4,9 @@ import com.ipyrin.programmerexercises.api.v1.model.AircraftDTO;
 import com.ipyrin.programmerexercises.objects.aircraft.Aircraft;
 import com.ipyrin.programmerexercises.objects.aircraft.enums.AircraftSize;
 import com.ipyrin.programmerexercises.objects.aircraft.enums.AircraftType;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class AircraftMapperTest {
 

@@ -3,16 +3,16 @@ package com.ipyrin.programmerexercises.service;
 import com.ipyrin.programmerexercises.objects.aircraft.Aircraft;
 import com.ipyrin.programmerexercises.objects.aircraft.enums.AircraftSize;
 import com.ipyrin.programmerexercises.objects.aircraft.enums.AircraftType;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class AircraftCompositeQueueTest {
 
     AircraftCompositeQueue subject;
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         subject = new AircraftCompositeQueue();
     }
