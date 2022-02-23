@@ -13,7 +13,7 @@ public class AircraftCompositeQueueTest {
     AircraftCompositeQueue subject;
 
     @BeforeEach
-    public void setUp() throws Exception {
+    public void setUp() {
         subject = new AircraftCompositeQueue();
     }
 
